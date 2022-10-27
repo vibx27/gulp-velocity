@@ -1,13 +1,22 @@
 {
-  "private": true,
   "type": "module",
+  "private": false,
+  "license": "MIT",
   "version": "1.0.0",
-  "name": "gulp-velocity",
-  "author": "Barcelos, Vitor",
-  "description": "Gulp Velocity",
+  "name": "@vibx27/gulp-velocity",
+  "keywords": ["gulp", "typescript", "velocity"],
+  "author": "Barcelos, Vitor <vitor@barcelos.dev.br>",
+  "homepage": "https://github.com/vibx27/gulp-velocity#README.md",
+  "description": "Gulp Utility Suite for Typescript Developers",
   "scripts": {
-    "prebuild": "rimraf lib",
-    "build": "npx tsc -p tsconfig.json"
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vibx27/gulp-velocity.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
     "@types/gulp": "^4.0.9",
@@ -24,7 +33,6 @@
     "tslib": "^2.4.0"
   },
   "devDependencies": {
-    "rimraf": "^3.0.2",
     "typescript": "^4.8.4",
     "tsconfig-paths": "^4.1.0"
   }

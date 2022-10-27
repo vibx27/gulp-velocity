@@ -1,0 +1,31 @@
+{
+  "private": true,
+  "type": "module",
+  "version": "1.0.0",
+  "name": "gulp-velocity",
+  "author": "Barcelos, Vitor",
+  "description": "Gulp Velocity",
+  "scripts": {
+    "prebuild": "rimraf lib",
+    "build": "npx tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "@types/gulp": "^4.0.9",
+    "@types/node": "^16.11.7",
+    "gulp": "^4.0.2",
+    "gulp-execa": "^4.2.0",
+    "gulp-if": "^3.0.0",
+    "gulp-nodemon": "^2.5.0",
+    "gulp-ts-alias": "^2.0.0",
+    "gulp-typescript": "^6.0.0-alpha.1",
+    "gulp-uglify": "^3.0.2",
+    "nodemon": "^2.0.19",
+    "ts-loader": "^9.2.3",
+    "tslib": "^2.4.0"
+  },
+  "devDependencies": {
+    "rimraf": "^3.0.2",
+    "typescript": "^4.8.4",
+    "tsconfig-paths": "^4.1.0"
+  }
+}

@@ -28,8 +28,8 @@ export class GulpTypescriptTask extends GulpBaseTask {
 
   protected static async pathReplacement(options: GulpTaskOptions) {
     const tsconfig = path.join(options.root, "tsconfig.json");
-    const tsConfigPath = getPathReplacement(tsconfig);
-    await exec(tsConfigPath, {
+    const pathReplacement = getPathReplacement(tsconfig);
+    await exec(pathReplacement, {
       verbose: true,
       echo: false,
     });

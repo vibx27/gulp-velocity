@@ -1,9 +1,11 @@
 import { GulpTaskOptions } from "@typings/gulp.task.options";
-import { GulpWatchTask } from "@tasks/classes/watch.task";
+import { GulpWatchTask } from "../tasks/classes/watch.task.js";
 export declare class GulpScripts {
-    protected static tasks: (typeof GulpWatchTask)[];
-    static register(options: GulpTaskOptions): void;
-    static build(options: GulpTaskOptions): import("undertaker").TaskFunction;
-    static watch(options: GulpTaskOptions): import("undertaker").TaskFunction;
-    protected static getDefaultTasks(): (typeof GulpWatchTask)[];
+    protected readonly tasks: (typeof GulpWatchTask)[];
+    protected readonly options: GulpTaskOptions;
+    constructor(options: Partial<GulpTaskOptions>);
+    register(): void;
+    build(): import("undertaker").TaskFunction;
+    watch(): import("undertaker").TaskFunction;
+    protected getDefaultTasks(): (typeof GulpWatchTask)[];
 }
